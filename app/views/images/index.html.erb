@@ -1,3 +1,10 @@
 <h3>Welcome to imgur</h3>
 <%= link_to 'Add Image', new_image_path %>
 <br>
+
+<% @images.each do |image| %>
+  <tr>
+    <%= image_tag image.image_url %>
+    <br>
+  </tr>
+<% end %>
