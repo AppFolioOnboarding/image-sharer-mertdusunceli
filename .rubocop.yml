@@ -28,3 +28,8 @@ Style/Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/RegexpLiteral:
+  EnforcedStyle: percent_r
+
+
