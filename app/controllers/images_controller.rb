@@ -17,7 +17,7 @@ class ImagesController < ApplicationController
   end
 
   def index
-    @images = Image.all
+    @images = Image.order('created_at DESC')
   end
 
   private

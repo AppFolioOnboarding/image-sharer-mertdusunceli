@@ -1,6 +1,7 @@
 <p>
   <strong>Image URL:</strong>
-  <%= image_tag @image.image_url %>
+  <br>
+  <%= image_tag(@image.image_url, :class => "smaller")  %>
 </p>
 
 <%= link_to 'Back', images_path %>

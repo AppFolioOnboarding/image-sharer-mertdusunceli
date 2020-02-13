@@ -4,7 +4,6 @@
 
 <% @images.each do |image| %>
   <tr>
-    <%= image_tag image.image_url %>
-    <br>
+    <%= image_tag(image.image_url, :class => "smaller") %>
   </tr>
 <% end %>
