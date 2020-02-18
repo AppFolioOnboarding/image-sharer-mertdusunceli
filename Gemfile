@@ -19,6 +19,9 @@ gem 'jquery-rails'
 
 gem 'webpacker', '~> 4'
 
+gem 'rubocop', require: false
+gem 'rubocop-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -50,3 +53,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # For better forms
 gem 'simple_form'
+
+# For tagging purposes
+gem 'acts-as-taggable-on', '~> 6.0'
+
+# Pry for debugging
+gem 'pry'
+gem 'pry-remote'
