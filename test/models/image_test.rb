@@ -19,4 +19,9 @@ class ImageTest < ActiveSupport::TestCase
     @image = Image.new(image_url: INVALID_URL)
     assert_not_predicate @image, :valid?
   end
+
+  test 'is image with valid url and tag list' do
+    @image = Image.new(image_url: VALID_URL, tag_list: %w[skydiving paragliding])
+    assert_predicate @image, :valid?
+  end
 end
