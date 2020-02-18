@@ -1,7 +1,8 @@
 <h3>Add Image</h3>
 
 <%= simple_form_for @image do |f| %>
-  <%= f.input :image_url %>
+  <%= f.input :image_url, required: false, placeholder: 'Add Image URL', label: false %>
+  <%= f.text_field :tag_list, value: f.object.tag_list.to_s, placeholder: 'Add Tags' %>
   <%= f.button :submit %>
 <% end %>
 
