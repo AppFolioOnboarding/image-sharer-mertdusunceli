@@ -67,4 +67,19 @@ class ImagesControllerTest < ActionDispatch::IntegrationTest
     exception = assert_raises(Exception) { get BLANK_TAG }
     assert_equal exception.message, "undefined method `each' for nil:NilClass"
   end
+
+  test 'should delete image' do
+    Image.create!(image_url: VALID_URL, tag_list: 'SR-71')
+    assert_difference('Image.count', -1) do
+      delete image_path(Image.last.id)
+    end
+  end
+
+  test 'should not delete image twice' do
+    Image.create!(image_url: VALID_URL, tag_list: 'SR-71')
+    assert_difference('Image.count', -1) do
+      delete image_path(Image.last.id)
+    end
+    assert_raises(Exception) { delete image_path(Image.last.id) }
+  end
 end
