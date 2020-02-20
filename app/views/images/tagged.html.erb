@@ -1,10 +1,13 @@
 <h3>Welcome to imgur</h3>
 <%= link_to 'Add Image', new_image_path %>
 <br>
+<h6>Currently at "<%= @tag %>" tag</h6>
 
 <% @images.each do |image| %>
   <tr>
     <%= image_tag(image.image_url, :class => "small-picture") %>
+    <br>
+    <p>Tags</p>
     <p>
       <% image.tag_list.each do |tag| %>
         <%= link_to tag, tagged_path(tag: tag) %>
@@ -13,3 +16,5 @@
     </p>
   </tr>
 <% end %>
+<%= link_to 'Back', images_path %>
+

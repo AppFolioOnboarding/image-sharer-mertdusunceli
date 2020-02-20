@@ -20,9 +20,22 @@ class ImagesController < ApplicationController
     @images = Image.order('created_at DESC')
   end
 
+  def tagged
+    return if params[:tag].blank?
+
+    @images = Image.tagged_with(params[:tag])
+    @tag = params[:tag]
+  end
+
+  def destroy
+    @image = Image.find(params[:id])
+    @image.destroy
+    redirect_to images_path
+  end
+
   private
 
   def image_params
-    params.require(:image).permit(:image_url)
+    params.require(:image).permit(:image_url, :tag_list)
   end
 end

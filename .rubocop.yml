@@ -7,19 +7,23 @@ AllCops:
     - 'vendor/**/*'
     - 'node_modules/**/*'
     - 'bin/*'
+    - 'db/migrate/*'
+    - 'config/environments/development.rb'
   TargetRubyVersion: 2.5
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 112  # Maximum line length from `rails new`
+
+require: rubocop-rails
 
 Rails:
   Enabled: true
@@ -32,5 +36,4 @@ Style/FrozenStringLiteralComment:
 
 Style/RegexpLiteral:
   EnforcedStyle: percent_r
-
 
