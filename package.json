@@ -6,7 +6,8 @@
     "coffeescript": "1.12.7",
     "prop-types": "^15.6.1",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -22,12 +23,13 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.15.1",
     "eslint-config-appfolio-react": "^1.1.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
     "ignore-styles": "^5.0.1",
     "jsdom": "^11.11.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.2.0",
     "react-test-renderer": "^16.8.4",
-    "sinon": "^6.0.1",
+    "sinon": "^6.3.5",
     "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
