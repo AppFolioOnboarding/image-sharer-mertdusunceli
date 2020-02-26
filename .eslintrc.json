@@ -8,7 +8,16 @@
   },
   "settings": {
     "import/resolver": {
-      "webpack": {}
+      "webpack": {
+        "config": {
+          "resolve": {
+            "extensions": [
+              ".js",
+              ".jsx"
+            ]
+          }
+        }
+      }
     }
   }
 }
